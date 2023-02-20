@@ -1,0 +1,17 @@
+<h1>demo</h1>
+<div id="app"></div>
+<script type="module">
+  import { createApp } from "vue/dist/vue.esm-bundler.js";
+  import AkiUI, { SFCButton, JSXButton, MyButton } from "../../dist/aki-ui.mjs";
+  createApp({
+    template: `
+    <MyButton/>
+    <JSXButton/>
+    <SFCButton/>
+    `,
+  })
+    .component(MyButton.name, MyButton)
+    .component(SFCButton.name, SFCButton)
+    .component(JSXButton.name, SFCButton)
+    .mount("#app");
+</script>
