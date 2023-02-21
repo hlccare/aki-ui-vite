@@ -1,6 +1,26 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
+import { presetUno, presetAttributify, presetIcons } from "unocss";
+import Unocss from "unocss/vite";
+
+const colors = [
+  "white",
+  "black",
+  "gray",
+  "red",
+  "yellow",
+  "green",
+  "blue",
+  "indigo",
+  "purple",
+  "pink",
+];
+
+const safelist = [
+  ...colors.map((v) => `bg-${v}-500`),
+  ...colors.map((v) => `hover:bg-${v}-700`),
+];
 
 const rollupOptions = {
   // 确保外部化处理那些你不想打包进库的依赖
@@ -21,6 +41,11 @@ export default defineConfig({
     // 添加JSX插件
     vueJsx({
       // options are passed on to @vue/babel-plugin-jsx
+    }),
+    // 添加UnoCSS插件
+    Unocss({
+      safelist,
+      presets: [presetUno(), presetAttributify(), presetIcons()],
     }),
   ],
   // 库模式配置
