@@ -1,13 +1,31 @@
-<h1>demo</h1>
-<div id="app"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../dist/assets/entry.8eaca2d5.css" />
+  </head>
+  <body>
+    <h1>demo</h1>
+    <div id="app"></div>
+  </body>
+</html>
+
 <script type="module">
   import { createApp } from "vue/dist/vue.esm-bundler.js";
-  import AkiUI, { SFCButton, JSXButton, MyButton } from "../../dist/aki-ui.mjs";
+  import AkiUI, { SFCButton, JSXButton, Button } from "../../dist/aki-ui.mjs";
   createApp({
     template: `
-    <MyButton/>
-    <JSXButton/>
-    <SFCButton/>
+      <Button>test</Button>
+      <JSXButton/>
+      <SFCButton/>
+      <Button color="blue" icon="search">蓝色按钮</Button>
+      <Button color="green" icon="edit">绿色按钮</Button>
+      <Button color="gray" icon="check">灰色按钮</Button>
+      <Button color="yellow" icon="search">黄色按钮</Button>
+      <Button color="red" icon="delete">红色按钮</Button>
     `,
   })
     .use(AkiUI)

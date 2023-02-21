@@ -23,7 +23,7 @@ export const props = {
 };
 
 export default defineComponent({
-  name: "SButton",
+  name: "Button",
   props, // 属性
   setup(props, { slots }) {
     return () => (

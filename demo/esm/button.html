@@ -2,15 +2,15 @@
 <div id="app"></div>
 <script type="module">
   import { createApp } from "vue/dist/vue.esm-bundler.js";
-  import AkiUI, { SFCButton, JSXButton, MyButton } from "../../dist/aki-ui.mjs";
+  import AkiUI, { SFCButton, JSXButton, Button } from "../../dist/aki-ui.mjs";
   createApp({
     template: `
-    <MyButton/>
+    <Button/>
     <JSXButton/>
     <SFCButton/>
     `,
   })
-    .component(MyButton.name, MyButton)
+    .component(Button.name, Button)
     .component(SFCButton.name, SFCButton)
     .component(JSXButton.name, SFCButton)
     .mount("#app");
