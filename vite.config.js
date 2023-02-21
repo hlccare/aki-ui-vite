@@ -64,6 +64,7 @@ export default defineConfig({
   build: {
     rollupOptions,
     minify: false,
+    cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
       name: "AkiUI",
