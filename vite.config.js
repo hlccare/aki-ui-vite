@@ -17,9 +17,21 @@ const colors = [
   "pink",
 ];
 
+const icons = [
+  "search",
+  "edit",
+  "check",
+  "message",
+  "star-off",
+  "delete",
+  "add",
+  "share",
+];
+
 const safelist = [
   ...colors.map((v) => `bg-${v}-500`),
   ...colors.map((v) => `hover:bg-${v}-700`),
+  ...icons.map((v) => `i-ic-baseline-${v}`), // icon类名
 ];
 
 const rollupOptions = {
@@ -45,7 +57,7 @@ export default defineConfig({
     // 添加UnoCSS插件
     Unocss({
       safelist,
-      presets: [presetUno(), presetAttributify(), presetIcons()],
+      presets: [presetUno(), presetAttributify(), presetIcons()], // 图标预设
     }),
   ],
   // 库模式配置

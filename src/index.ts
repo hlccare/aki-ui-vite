@@ -10,11 +10,11 @@ import AkiUI from "./entry";
 createApp({
   template: `
     <div>
-        <SButton color="blue">蓝色按钮</SButton>
-        <SButton color="green">绿色按钮</SButton>
-        <SButton color="gray">灰色按钮</SButton>
-        <SButton color="yellow">黄色按钮</SButton>
-        <SButton color="red">红色按钮</SButton>
+        <SButton color="blue" icon="search">蓝色按钮</SButton>
+        <SButton color="green" icon="edit">绿色按钮</SButton>
+        <SButton color="gray" icon="check">灰色按钮</SButton>
+        <SButton color="yellow" icon="search"message>黄色按钮</SButton>
+        <SButton color="red" icon="delete">红色按钮</SButton>
     </div>
     `,
 })
