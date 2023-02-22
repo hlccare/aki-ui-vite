@@ -1,38 +1,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import { presetUno, presetAttributify, presetIcons } from "unocss";
-import Unocss from "unocss/vite";
-
-const colors = [
-  "white",
-  "black",
-  "gray",
-  "red",
-  "yellow",
-  "green",
-  "blue",
-  "indigo",
-  "purple",
-  "pink",
-];
-
-const icons = [
-  "search",
-  "edit",
-  "check",
-  "message",
-  "star-off",
-  "delete",
-  "add",
-  "share",
-];
-
-const safelist = [
-  ...colors.map((v) => `bg-${v}-500`),
-  ...colors.map((v) => `hover:bg-${v}-700`),
-  ...icons.map((v) => `i-ic-baseline-${v}`), // icon类名
-];
+import unocssConfig from "./config/unocss";
 
 const rollupOptions = {
   // 确保外部化处理那些你不想打包进库的依赖
@@ -55,10 +24,7 @@ export default defineConfig({
       // options are passed on to @vue/babel-plugin-jsx
     }),
     // 添加UnoCSS插件
-    Unocss({
-      safelist,
-      presets: [presetUno(), presetAttributify(), presetIcons()], // 图标预设
-    }),
+    unocssConfig(),
   ],
   // 库模式配置
   build: {
