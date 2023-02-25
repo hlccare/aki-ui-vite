@@ -29,7 +29,9 @@ export default defineConfig({
   // 库模式配置
   build: {
     rollupOptions,
-    minify: false,
+    minify: "terser", // boolean | 'terser' | 'esbuild'
+    sourcemap: true, // 输出单独的sourcemap
+    reportCompressedSize: true, // 生成压缩大小报告
     cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
@@ -39,15 +41,15 @@ export default defineConfig({
       formats: ["es", "umd", "iife"],
     },
   },
-  test:{
+  test: {
     // enable jest-like global test APIs
     globals: true,
     // simulate DOM with happy-dom
     // (requires installing happy-dom as a peer dependency)
-    environment: 'happy-dom',
+    environment: "happy-dom",
     // 支持tsx组件
     transformMode: {
-      web: [/.[tj]sx$/]
-    }
-  }
+      web: [/.[tj]sx$/],
+    },
+  },
 });
