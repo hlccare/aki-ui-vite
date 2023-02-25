@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../dist/assets/entry.be4735f9.css" />
+    <script src="../../node_modules/vue/dist/vue.global.js"></script>
+    <script src="../../dist/aki-ui.iife.js"></script>
+  </head>
+  <body>
+    <h1>demo</h1>
+    <div id="app"></div>
+  </body>
+  <script>
+    console.log("111");
+    const { createApp } = Vue;
+    console.log("vue", Vue);
+    console.log("AkiUI", AkiUI);
+    createApp({
+      template: `
+      <Button>test</Button>
+      <JSXButton/>
+      <SFCButton/>
+      <Button color="blue" icon="search">蓝色按钮</Button>
+      <Button color="green" icon="edit">绿色按钮</Button>
+      <Button color="gray" icon="check">灰色按钮</Button>
+      <Button color="yellow" icon="search">黄色按钮</Button>
+      <Button color="red" icon="delete">红色按钮</Button>
+    `,
+    })
+      .use(AkiUI.default)
+      .mount("#app");
+  </script>
+</html>
