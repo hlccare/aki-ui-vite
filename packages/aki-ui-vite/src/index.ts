@@ -1,8 +1,8 @@
 import { createApp } from "vue/dist/vue.esm-browser.js";
 
-import Button from "./button";
-import JSXButton from "./JSXButton";
-import SFCButton from "./SFCButton.vue";
+// import Button from "./button";
+// import JSXButton from "./JSXButton";
+// import SFCButton from "./SFCButton.vue";
 import AkiUI from "./entry";
 
 // createApp(Button).mount("#app");
