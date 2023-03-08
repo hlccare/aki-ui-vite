@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../dist/assets/entry.be4735f9.css" />
     <script src="../../node_modules/vue/dist/vue.global.js"></script>
-    <script src="../../dist/aki-ui.iife.js"></script>
+    <!-- <script src="../../dist/aki-ui.iife.js"></script> -->
+    <script src="../../dist/Button/index.iife.js"></script>
   </head>
   <body>
     <h1>demo</h1>
@@ -17,7 +18,8 @@
     console.log("111");
     const { createApp } = Vue;
     console.log("vue", Vue);
-    console.log("AkiUI", AkiUI);
+    // console.log("AkiUI", AkiUI);
+    console.log("Button", Button);
     createApp({
       template: `
       <Button>test</Button>
@@ -30,7 +32,7 @@
       <Button color="red" icon="delete">红色按钮</Button>
     `,
     })
-      .use(AkiUI.default)
+      .use(Button.default)
       .mount("#app");
   </script>
 </html>

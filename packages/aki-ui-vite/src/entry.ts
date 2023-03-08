@@ -1,7 +1,8 @@
 import { App } from "vue";
-import Button from "./button";
+import Button from "./Button";
 import SFCButton from "./SFCButton.vue";
 import JSXButton from "./JSXButton";
+import "uno.css";
 
 // 两种导出方式
 // 导出单独组件
