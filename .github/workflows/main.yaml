@@ -14,12 +14,10 @@ jobs:
       - uses: pnpm/action-setup@v2.1.0
         with:
           version: 7.2.1
-      - name: dir-change
-        run: cd ./packages/aki-ui-vite
       - name: Install modules
         run: pnpm install
       - name: Run Lint
-        run: pnpm run lint
+        run: cd packages/aki-ui-vite && pnpm run lint
   UnitTest:
     # 单元测试任务
     # The type of runner that the job will run on
@@ -30,9 +28,7 @@ jobs:
       - uses: pnpm/action-setup@v2.1.0
         with:
           version: 7.2.1
-      - name: dir-change
-        run: cd ./packages/aki-ui-vite
       - name: Install modules
         run: pnpm install
       - name: Run Test
-        run: pnpm run test:run
+        run: cd packages/aki-ui-vite && pnpm run test:run
